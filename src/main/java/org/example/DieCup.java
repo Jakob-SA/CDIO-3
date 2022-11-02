@@ -11,7 +11,7 @@ public class DieCup {
         die2.roll();
     }
     public int getDieSum() {
-        dieSum = die1.getFaceValue1() + die2.getFaceValue2();
+        dieSum = die1.getFaceValue() + die2.getFaceValue();
         return dieSum;
     }
 }
