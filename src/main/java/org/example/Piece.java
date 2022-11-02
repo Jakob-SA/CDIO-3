@@ -1,15 +1,15 @@
 package org.example;
 
 public class Piece {
-    private int location;
+    private Field location;
     private String color;
 
 
 
-    public int addLocation(int dieSum)
+    public void addLocation(int dieSum)
     {
         location+=dieSum;
-        return location;
+
     }
     public int getLocation(){
         return location;
