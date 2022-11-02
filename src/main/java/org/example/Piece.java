@@ -1,3 +1,5 @@
+package org.example;
+
 public class Piece {
     private int location;
     private String color;
