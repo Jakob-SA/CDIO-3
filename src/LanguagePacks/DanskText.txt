@@ -1,0 +1,5 @@
+welcomemsg
+Velkommen til spillet! Hvor mange spillere er i (mellem 2-4)?
+throwDie
+Tryk på enter for at ryste terningerne og kaste!
+
