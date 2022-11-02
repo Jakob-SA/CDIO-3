@@ -43,8 +43,11 @@ Her kommer indledningen...
 \section{Projekt-planlægning}
 \begin{itemize}
     \item [1/11] Her laver vi en smule opgaveprioritering og udarbejder en hurtig kravsliste over funktionelle krav.\\
-    Evaluering (på dagen): Alt nået \\
-    \item [2/11] Lave en primær use case beskrivelse (brief) og identificere andre sub-use cases. Udarbejde et use case diagram og starte på domænemodel.
+    Evaluering på dagen: Alt nået
+    \item [2/11] Lave en primær use case beskrivelse (brief) og identificere andre sub-use cases. Udarbejde et use case diagram og starte på domænemodel.\\
+    Evaluering på dagen: Alt nået, samt domænemodel færdiggjort og start på designklasse diagrammet. Vi har implementeret de første og simpleste klasser i IntelliJ.
+    \item [4/11] Denne dag skal der laves system sekvensdiagram samt sekvensdiagram.
+    
 \end{itemize}
 efter vi har lavet vores design klasse diagram vil starte med at lave den klasse der har færrest bindinger til de andre 
 
@@ -61,6 +64,59 @@ efter vi har lavet vores design klasse diagram vil starte med at lave den klasse
     \item En brik per spiller, som kan rykke
     \item 
 \end{itemize}
+
+\subsection{Use case beskrivelse }
+\textbf{Scope:} Spil Monopoly Junoir  
+\\
+\textbf{Level:}
+\\
+\textbf{Primary actor:} Spillere 1 - 4 
+\\
+\textbf{Stakeholders and interests:} 
+\item Spillerne vil spille et underholdende spil med formål at vinde. 
+\item Projektvejlederen vil have et Monopoly Junoir spil som vil tilfredsstille kundens vision og krav
+\item Kunden vil have et monopoly spil, som har taget udgangspunkt i den fremlagte vision og de dertil hørende Monopoly Junoir regler 
+\\
+\textbf{Preconditions:} Computeren, som skal køre Monopoly Junoir skal have den nyeste version af Java. 
+\\
+\textbf{Succes guarantee:} Når en spiller går fallit tæller man sammen og finder en vinder 
+
+\textbf{Sub use cases (beskrevet på 'brief format'):}
+\begin{itemize}
+    \item Ryk brik
+    \item Vælg spillere
+    \item Slå terninger
+    \item Ændre pengebeholdning
+    \item Skift tur
+    \item Køb felt
+\end{itemize}
+
+\textbf{Use case skrevet på 'fully dressed' format:}\\
+
+
+\textbf{Main Scenario}
+\begin{enumerate}
+\itemsep-0.5em
+    \item Første spiller slår med terningerne
+    \item Systemet lægger øjnene på terningerne sammen
+    \item Første spillers brik bliver nu rykket det antal felter som terningernes øjne viser
+    \item Spilleren lander på en grund der ikke er købt endnu. System fortæller spilleren hvilket felt de er landet på, og spilleren betaler samtidig det beløb som feltet koster.
+    \item Pengene bliver trukket fra spillerens pengebeholdning
+    \item Systemet skifter tur til næste spiller.\\
+    \textit{Punkterne 1-6 bliver nu gentaget for næste spiller}
+\end{enumerate}
+\textbf{Main Succes Scenario}
+\begin{enumerate}
+\itemsep-0.5em
+    \item Spilleren har slået med terningerne, rykket sine brikker og evt. købt/betalt/fået beløb, og turen er gået videre til næste spiller. 
+\end{enumerate}
+\textbf{Extension (Alternate Succes Scenario): }
+\begin{enumerate}
+    \item [4.a] Spilleren lander p̊a en grund der ikke er købt endnu. Systemet fortæller spilleren hvilket felt de er landet på. Spilleren har dog ikke nok penge til at betale feltets pris.
+    \subitem 1. Spillet slutter da en spiller er gået fallit. Alle spillernes pengebeholdning bliver talt op, og den med flest penge vinder.
+    \item [4.b] Spilleren lander på en grund der er købt. System fortæller spilleren hvilket felt de er landet på, og spilleren betaler samtidig husleje til spilleren som ejer feltet.
+    \item [4.c] Spilleren lander på et felt uden handling.
+\end{enumerate}
 
 \section{Design}
 
