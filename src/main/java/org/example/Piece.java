@@ -1,22 +1,18 @@
 package org.example;
 
 public class Piece {
-    private int location;
+    private int location = 0;
     private String color;
 
 
-
-    public int addLocation(int dieSum)
-    {
-        location+=dieSum;
-        return location;
+    public void addLocation(int dieSum){
+        location += dieSum;
     }
     public int getLocation(){
         return location;
     }
 
-    public void setLocation(int field)
-    {
+    public void setLocation(int field) {
         location = field;
     }
     public String toString(){
