@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Players"2..4" - Game
+Piece"1" - Players
+Players -- "1"BankAccount
+Game - "1"DieCup
+DieCup -- "2"Die
+Game -- "1"Board
+Board -- "24"Field
+Field -- "16"PropField
+Field -- "4"ChanceField
+Field -- "4"NoActionField
+
+@enduml
