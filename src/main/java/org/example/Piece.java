@@ -1,7 +1,7 @@
 package org.example;
 
 public class Piece {
-    private Field location;
+    private PropertyField location;
     private String color;
 
 

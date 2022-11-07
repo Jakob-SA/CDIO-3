@@ -1,14 +1,13 @@
 package org.example;
 
-public class Field {
-    public int fieldNumber, buyPrice, rent;
-    public String fieldName;
-
-
-    public Field(int fieldNumber, int buyPrice, int rent, String fieldName) {
+public abstract class Field {
+    public int fieldNumber;
+    public Field (int fieldNumber)
+    {
         this.fieldNumber = fieldNumber;
-        this.fieldName = fieldName;
-        this.buyPrice = buyPrice;
-        this.rent = rent;
+
     }
+    public abstract String getName ();
+
+
 }

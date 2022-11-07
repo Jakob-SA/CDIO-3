@@ -1,9 +1,10 @@
-import org.example.Field;
+import org.example.PropertyField;
 
 public class GameBoard {
+
         public void makeField(){
-        Field[] arr = new Field [24];
-        arr [0] = new Field(0,0,0,"Start");
+        PropertyField[] arr = new PropertyField[24];
+        arr [0] = new PropertyField("3fsf","we",0,1);
 }
 
 }
