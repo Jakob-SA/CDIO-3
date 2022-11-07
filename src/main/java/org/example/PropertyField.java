@@ -20,7 +20,8 @@ public class PropertyField extends Field {
     }
 
 
-    public void buyField(String Player){
+    public void buyField( Player buyer){
 
     }
 }
+

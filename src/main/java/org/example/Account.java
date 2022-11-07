@@ -1,9 +1,10 @@
 package org.example;
 
-public class Account {
-    private int balance;
+public class Account extends Player {
+    public int balance;
 
     public Account(int inbalance) {
+        super("title");
         balance = inbalance;
     }
     public int getBalance(){
@@ -12,6 +13,7 @@ public class Account {
     public void addBalance(int amount){
         balance += amount;
     }
+
 
     public String toString(){
         return balance + "M";
