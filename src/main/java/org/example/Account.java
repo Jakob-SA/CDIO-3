@@ -13,6 +13,10 @@ public class Account extends Player {
     public void addBalance(int amount){
         balance += amount;
     }
+    public void payRent(Account player){
+        this.balance -= balance;
+        player.balance +=balance;
+    }
 
 
     public String toString(){

@@ -1,13 +1,13 @@
 package org.example;
 
 public abstract class Field {
-    public int fieldNumber;
-    public Field (int fieldNumber)
+    protected String fieldName;
+    public Field (String name)
     {
-        this.fieldNumber = fieldNumber;
-
+        fieldName = name;
     }
     public abstract String getName ();
+    public abstract void landedOn(Player player);
 
 
 }

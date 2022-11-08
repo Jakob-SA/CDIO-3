@@ -1,14 +1,14 @@
 package org.example;
 
 public class PropertyField extends Field {
-    public int  buyPrice, rent;
-    public String fieldName;
-    public String player;
+   private int  buyPrice;
+    private int rent;
+    private String player;
 
 
-    public PropertyField(String owner ,String fieldName, int price, int rent) {
-        super(1);
-        this.fieldName = fieldName;
+
+    public PropertyField(String owner ,String name, int price, int rent) {
+        super(name);
         this.buyPrice = price;
         this.rent = rent;
         this.player = owner;
@@ -19,9 +19,22 @@ public class PropertyField extends Field {
         return fieldName;
     }
 
+    @Override
+    public void landedOn(Player player) {
 
-    public void buyField( Player buyer){
+
 
     }
+
+    public void setOwner(String owner){
+        this.player = owner;
+
+    }
+    public int getBuyPrice() {
+        return buyPrice;
+    }
+
+
+
 }
 
