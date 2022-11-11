@@ -19,6 +19,7 @@ public class Player {
     public static int getPlayerCount() {
         return playerCount;
     }
+
     public int getPlayerNumber() {
         return playerNumber;
     }
