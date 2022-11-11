@@ -11,5 +11,6 @@ Board -- "24"Field
 Field -- "16"PropField
 Field -- "4"ChanceField
 Field -- "4"NoActionField
+Board -- "30"ChanceCard
 
 @enduml

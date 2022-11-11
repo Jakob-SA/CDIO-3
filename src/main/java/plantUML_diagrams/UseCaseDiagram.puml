@@ -1,24 +1,20 @@
 @startuml
 'https://plantuml.com/use-case-diagram
 skinparam actorStyle awesome
-[<<actor>>\nSystem] as Foo
+
 Player as Foo1
-[<<actor>>\nRandomCalculator] as Foo2
-package Game{
-    usecase "ryk brik" as UC1
-    usecase "slå terning" as UC2
-    usecase "land på felt" as UC3
-    usecase "vælg spillere" as UC5
-    usecase "skift tur" as UC6
+
+package Monopoly{
+    usecase "Play game" as UC1
+    usecase "Start game" as UC2
+    usecase "Take turn" as UC3
+
 }
 left to right direction
-Foo1 --> UC5
-Foo1 -> UC2
+Foo1 --> UC1
+UC1 ..> UC2 :includes
+UC1 ..> UC3 : includes
 
-UC1 <- Foo
-UC6 <- Foo
-UC3 <-- Foo
-UC2 <-- Foo2
 
 
 @enduml

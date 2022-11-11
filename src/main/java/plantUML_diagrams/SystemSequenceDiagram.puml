@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Players -> System: Start game
+Players <-- System: Avaliable languages
+Players -> System: Choose language
+Players <-- System: Avaliable no. of players (2-4)
+Players -> System: Choose no. of players
+loop balance!=0
+Players -> System: Roll die
+Players <-- System: Die value
+Players <-- System: Move piece
+Players <-- System: Position
+Players <-- System: Action
+end
+Players <-- System: Winner
+
+
+@enduml
