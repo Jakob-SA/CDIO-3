@@ -5,6 +5,7 @@ public class Main {
         System.out.println("hello");
         Game game = new Game();
         game.createPlayers(4);
+        game.test();
 
     }
 

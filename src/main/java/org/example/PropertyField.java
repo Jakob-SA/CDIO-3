@@ -1,37 +1,45 @@
 package org.example;
 
 public class PropertyField extends Field {
-   private int  buyPrice;
+    private int  buyPrice;
     private int rent;
-    private String player;
-
-
-
-    public PropertyField(String owner ,String name, int price, int rent) {
+    private String playerName;
+    private Player owner;
+    public PropertyField(Player owner, String ownerName ,String name, int price, int rent) {
         super(name);
         this.buyPrice = price;
         this.rent = rent;
-        this.player = owner;
+        this.playerName = ownerName;
+        this.owner = owner;
     }
 
-    @Override
+
     public String getName() {
-        return fieldName;
+        return super.getName();
     }
 
     @Override
-    public void landedOn(Player player) {
-
-
-
+    public int landedOn(Player player) {
+        if (owner == null){
+            setOwner(player);
+            setPlayerName(player.getName());
+            return buyPrice;
+        } else{
+            return buyPrice;
+        }
     }
 
-    public void setOwner(String owner){
-        this.player = owner;
-
+    public void setOwner(Player owner){
+        this.owner = owner;
+    }
+    public void setPlayerName(String name){
+        this.playerName = name;
     }
     public int getBuyPrice() {
         return buyPrice;
+    }
+    public String toString(){
+        return "Owner is " + owner + " named " + playerName + "Field" + super.getName();
     }
 
 

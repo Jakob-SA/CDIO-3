@@ -28,4 +28,7 @@ public class Player {
     public int getPlayerNumber() {
         return playerNumber;
     }
+    public String toString(){
+        return "Playernumber" + playerNumber+ name;
+    }
 }
