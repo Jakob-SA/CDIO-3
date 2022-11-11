@@ -20,7 +20,7 @@ public class PropertyField extends Field {
     }
 
     @Override
-    public void landedOn(Player player) {
+    public void landedOn() {
 
 
 
