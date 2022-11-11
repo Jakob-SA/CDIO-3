@@ -11,7 +11,9 @@ public abstract class Field {
         return ""+fieldName;
     }
 
-    public abstract void landedOn(Player player);
+    public void landedOn(Player player){
+
+    };
 
 
 }
