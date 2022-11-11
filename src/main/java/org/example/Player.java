@@ -4,12 +4,17 @@ public class Player {
 
     private Account acc;
     private Piece piece;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private String name;
     private static int playerCount = 1;
     private int playerNumber;
 
-    public Player (String title){
-        name = title;
+    public Player (String name){
+        this.name = name;
         playerNumber = playerCount;
         playerCount++;
     }
