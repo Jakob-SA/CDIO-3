@@ -6,9 +6,8 @@ public class NoActionField extends Field {
         super(name);
     }
 
-    @Override
     public String getName() {
-        return null;
+        return super.getName();
     }
 
     @Override

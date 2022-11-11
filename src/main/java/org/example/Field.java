@@ -6,7 +6,11 @@ public abstract class Field {
     {
         fieldName = name;
     }
-    public abstract String getName ();
+
+    public String getName() {
+        return ""+fieldName;
+    }
+
     public abstract void landedOn(Player player);
 
 
