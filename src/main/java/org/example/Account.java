@@ -3,7 +3,7 @@ package org.example;
 public class Account {
 
 
-    public int balance;
+    private int balance;
 
     public Account() {}
     public int getBalance(){
