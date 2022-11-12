@@ -4,7 +4,6 @@ package org.example;
 public class Board {
         Field[] fields = new Field[24];
         public void makeFields(){
-
         fields[0] = new NoActionField("Start");
         fields[1] = new PropertyField(null,null,"Burgerbaren",1,1);
         fields[2] = new PropertyField(null,null,"Pizzahuset",1,1);

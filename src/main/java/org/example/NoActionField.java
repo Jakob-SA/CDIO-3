@@ -6,11 +6,6 @@ public class NoActionField extends Field {
         super(name);
     }
 
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
     public int landedOn(Player player) {
         return 0;
 

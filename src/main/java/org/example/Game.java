@@ -12,13 +12,7 @@ public class Game {
     Board board = new Board();
     public void test () {
         board.makeFields();
-        System.out.println();
-        dieCup.shake();
-        players.get(0).acc.addBalance(board.fields[dieCup.getDieSum()].landedOn(players.get(0)));
-        System.out.println(players.get(0).acc);
-        System.out.println(dieCup);
-        System.out.println(board.fields[dieCup.getDieSum()]);
-        board.fields[6].getName();
+        System.out.println(board.fields[6].getName());
 
     }
     public void createPlayers(int numberOfPlayers) {

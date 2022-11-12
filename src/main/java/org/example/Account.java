@@ -19,6 +19,6 @@ public class Account {
 
 
     public String toString(){
-        return balance + "M";
+        return balance + " M";
     }
 }
