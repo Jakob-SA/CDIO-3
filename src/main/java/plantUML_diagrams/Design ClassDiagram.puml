@@ -13,12 +13,41 @@ Field --> "16"ProportyField
 Field --> "4"ChanceField
 Field --> "4"NoActionField
 
-
 Class Board
 Class Field
 Class ProportyField
 Class ChanceField
 Class NoActionField
+
+Class Field
+Field : #int fieldName
+Field : landetOn ()
+Field : getName ()
+Field : field ()
+
+Class ChanceField
+ChanceField : #Field
+ChanceField : MoveToStart ()
+ChanceField : Move5Fields ()
+ChanceField : MoveToSP ()
+
+Class Board
+Board : makeField ()
+Board : toString ()
+
+Class Game
+
+Class NoActionField
+NoActionField : # Field
+NoActionField : doNothing()
+
+Class ProportyField
+ProportyField : - int buyPrice
+ProportyField : - int rent
+ProportyField : - String player
+ProportyField : PayRent ()
+ProportyField : SetOwner ()
+ProportyField : BuyField ()
 
 Class DieCup
 DieCup : - int dieSum
