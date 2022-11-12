@@ -5,8 +5,7 @@ public class Account {
 
     public int balance;
 
-    public Account() {
-    }
+    public Account() {}
     public int getBalance(){
         return balance;
     }

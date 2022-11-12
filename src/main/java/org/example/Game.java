@@ -12,9 +12,12 @@ public class Game {
     Board board = new Board();
     public void test () {
         board.makeFields();
-        System.out.println(board.fields[6].getName());
+        createPlayers(2);
+        System.out.println(players.size());
+
 
     }
+
     public void createPlayers(int numberOfPlayers) {
         players = new ArrayList<Player>();
         for (int i = 0; i < numberOfPlayers; i++) {
@@ -34,5 +37,9 @@ public class Game {
                     break;
             }
         }
+    }
+    public void takeTurn(Player player){
+
+
     }
 }

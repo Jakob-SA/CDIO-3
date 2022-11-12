@@ -3,7 +3,7 @@ package org.example;
 public class Player {
 
     Account acc = new Account();
-    private Piece piece;
+    Piece piece = new Piece();
 
     public void setName(String name) {
         this.name = name;
