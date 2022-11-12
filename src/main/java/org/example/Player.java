@@ -2,14 +2,19 @@ package org.example;
 
 public class Player {
 
-    private Account acc;
+    Account acc = new Account(20);
     private Piece piece;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private String name;
     private static int playerCount = 1;
     private int playerNumber;
 
-    public Player (String title){
-        name = title;
+    public Player (String name){
+        this.name = name;
         playerNumber = playerCount;
         playerCount++;
     }
@@ -22,5 +27,8 @@ public class Player {
 
     public int getPlayerNumber() {
         return playerNumber;
+    }
+    public String toString(){
+        return "Playernumber" + playerNumber+ name;
     }
 }

@@ -1,10 +1,9 @@
 package org.example;
 
-public class Account extends Player {
+public class Account {
     public int balance;
 
     public Account(int inbalance) {
-        super("title");
         balance = inbalance;
     }
     public int getBalance(){

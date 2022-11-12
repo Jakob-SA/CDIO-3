@@ -1,7 +1,7 @@
 package org.example;
 
 public abstract class Field {
-    protected String fieldName;
+    private String fieldName;
     public Field (String name)
     {
         fieldName = name;
@@ -11,7 +11,8 @@ public abstract class Field {
         return ""+fieldName;
     }
 
-    public abstract void landedOn(Player player);
+
+    public abstract int landedOn(Player player);
 
 
 }

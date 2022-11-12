@@ -11,7 +11,8 @@ public class NoActionField extends Field {
     }
 
     @Override
-    public void landedOn(Player player) {
+    public int landedOn(Player player) {
+        return 0;
 
     }
 }
