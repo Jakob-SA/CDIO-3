@@ -2,7 +2,7 @@ package org.example;
 
 public class Player {
 
-    Account acc = new Account(20);
+    Account acc = new Account();
     private Piece piece;
 
     public void setName(String name) {

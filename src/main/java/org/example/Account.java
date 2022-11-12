@@ -1,10 +1,11 @@
 package org.example;
 
 public class Account {
+
+
     public int balance;
 
-    public Account(int inbalance) {
-        balance = inbalance;
+    public Account() {
     }
     public int getBalance(){
         return balance;
@@ -16,7 +17,9 @@ public class Account {
         this.balance -= balance;
         player.balance +=balance;
     }
-
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
 
     public String toString(){
         return balance + " M";
