@@ -1,7 +1,6 @@
 package org.example;
 
 public class ChanceField extends Field{
-    Piece piece = new Piece();
     public ChanceField(String name) {
         super(name);
     }
@@ -12,23 +11,14 @@ public class ChanceField extends Field{
     }
 
     @Override
-    public int landedOn(Player player) {
+    public int landedOn(Player player){
         int  randomChanceCard = (int)(Math.random()*3)+1;   //Random chancecard chosen
-        if(randomChanceCard==1)
-            moveToStart();
-        if(randomChanceCard==2)
-            move5Fields();
-        if(randomChanceCard==3)
-            moveToSP();
+        if(randomChanceCard == 1)
+            player.piece.setLocation(0);
+        if(randomChanceCard == 2)
+            player.piece.addLocation(5);
+        if(randomChanceCard == 3)
+            player.piece.setLocation(23);
         return 0;
-    }
-    public void moveToStart(){
-        piece.setLocation(0);
-    }
-    public void move5Fields(){
-        piece.addLocation(5);
-    }
-    public void moveToSP(){
-        piece.setLocation(24);
     }
 }
