@@ -4,13 +4,6 @@ public class ChanceField extends Field{
     public ChanceField(String name) {
         super(name);
     }
-
-    @Override
-    public String getName() {
-        return null;
-    }
-
-    @Override
     public int landedOn(Player player){
         int  randomChanceCard = (int)(Math.random()*3)+1;   //Random chancecard chosen
         if(randomChanceCard == 1)

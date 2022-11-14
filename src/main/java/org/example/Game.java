@@ -8,24 +8,22 @@ import java.util.Scanner;
 public class Game {
     List<Player> players;
     DieCup dieCup = new DieCup(6);
-    Scanner input = new Scanner(System.in);
     Board board = new Board();
     GUIController GUIController = new GUIController();
+    private int counter = 0;
 
 
     public void test () {
         board.makeFields();
-
         GUIController.guiCreateboard();
         createPlayers(GUIController.guiNumberOfPlayers());
         GUIController.guiCreatePieces(players.size());
         for(int i = 0 ; i < players.size();i++){
             GUIController.guiCreatePlayer(players.get(i).getName(),players.get(i).acc.getBalance(),i);
         }
-        GUIController.print("Jeg tester lige");
-        takeTurn(0);
-        players.get(0).piece.setLocation(0);
-
+        while(true) {
+            takeTurn(players.get(counter % players.size()));
+        }
 
 
 
@@ -53,13 +51,15 @@ public class Game {
         }
     }
 
-    public void takeTurn(int player){
+    public void takeTurn(Player player){
         dieCup.shake();
-        //GUI ber om shake og viser øjenene
-        players.get(player).piece.addLocation(dieCup.getDieSum());          //brikken flytter
-        //GUI gir besked om hvilket felt der er landet på og hvad der sker.
-        board.fields[players.get(player).piece.getLocation()].landedOn(players.get(player));
-        GUIController.print("Your turn is done. It is now " + players.get(player+1).getName() + "s turn!");
+        GUIController.print("Press OK to roll the die!");
+        GUIController.setDie(dieCup.getDieSum());
+        player.piece.addLocation(dieCup.getDieSum());          //brikken flytter
+        GUIController.print("You landed on " + board.fields[player.piece.getLocation()].toString());
+        board.fields[player.piece.getLocation()].landedOn(player);
+        GUIController.print("Your turn is done. It is now " + players.get(players.indexOf(player)+1).getName() + "s turn!");
+        GUIController.updatePlayer(players.indexOf(player), player.acc.getBalance(),player.piece.getLocation());
     }
     public int chooseWinner(){
         int winner = 0;

@@ -12,9 +12,9 @@ public class Account {
     public void addBalance(int amount){
         balance += amount;
     }
-    public void payRent(Account player){
-        this.balance -= balance;
-        player.balance +=balance;
+    public void payRent(Account player, int amount){
+        this.balance -= amount;
+        player.balance +=amount;
     }
     public void setBalance(int balance) {
         this.balance = balance;

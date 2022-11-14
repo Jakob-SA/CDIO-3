@@ -13,18 +13,14 @@ public class PropertyField extends Field {
         this.owner = owner;
     }
 
-
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
     public int landedOn(Player player) {
         if (owner == null){
             setOwner(player);
             setPlayerName(player.getName());
+            player.acc.addBalance(-buyPrice);
             return buyPrice;
         } else{
+            player.acc.payRent(owner.acc,buyPrice);
             return buyPrice;
         }
     }
@@ -39,7 +35,7 @@ public class PropertyField extends Field {
         return buyPrice;
     }
     public String toString(){
-        return "Owner is " + owner + " named " + playerName + "Field" + super.getName();
+        return super.getName() + ". The owner is " + playerName;
     }
 
 
