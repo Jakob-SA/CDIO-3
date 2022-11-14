@@ -13,7 +13,7 @@ public class ChanceField extends Field{
 
     @Override
     public void landedOn() {
-        int  randomChanceCard = (int)(Math.random()*3)+1;
+        int  randomChanceCard = (int)(Math.random()*3)+1;   //Random chancecard chosen
         if(randomChanceCard==1)
             moveToStart();
         if(randomChanceCard==2)
