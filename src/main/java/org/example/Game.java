@@ -22,6 +22,7 @@ public class Game {
             GUIController.guiCreatePlayer(players.get(i).getName(),players.get(i).acc.getBalance(),i);
         }
         GUIController.print("Jeg tester lige");
+        takeTurn(0);
         players.get(0).piece.setLocation(0);
 
 
@@ -51,7 +52,12 @@ public class Game {
         }
     }
 
-    public void takeTurn(Player player){
-        Helper.pressEnter("Press enter");
+    public void takeTurn(int player){
+        dieCup.shake();
+        //GUI ber om shake og viser øjenene
+        players.get(player).piece.addLocation(dieCup.getDieSum());          //brikken flytter
+        //GUI gir besked om hvilket felt der er landet på og hvad der sker.
+        board.fields[players.get(player).piece.getLocation()].landedOn(players.get(player));
+        GUIController.print("Your turn is done. It is now " + players.get(player+1).getName() + "s turn!");
     }
 }
