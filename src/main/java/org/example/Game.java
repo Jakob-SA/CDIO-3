@@ -21,6 +21,9 @@ public class Game {
         for(int i = 0 ; i < players.size();i++){
             GUIController.guiCreatePlayer(players.get(i).getName(),players.get(i).acc.getBalance(),i);
         }
+        GUIController.print("Jeg tester lige");
+        players.get(0).piece.setLocation(0);
+
 
 
 
@@ -47,6 +50,7 @@ public class Game {
             }
         }
     }
+
     public void takeTurn(Player player){
         Helper.pressEnter("Press enter");
     }

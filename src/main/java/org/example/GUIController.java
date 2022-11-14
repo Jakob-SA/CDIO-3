@@ -36,4 +36,7 @@ public class GUIController {
         gui.addPlayer(newplayer);
         gui_players[index] = newplayer;
     }
+    public void print(String msg){
+        gui.showMessage(msg);
+    }
 }

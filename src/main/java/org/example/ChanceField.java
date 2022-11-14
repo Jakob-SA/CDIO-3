@@ -12,7 +12,7 @@ public class ChanceField extends Field{
     }
 
     @Override
-    public void landedOn() {
+    public int landedOn(Player player) {
         int  randomChanceCard = (int)(Math.random()*3)+1;   //Random chancecard chosen
         if(randomChanceCard==1)
             moveToStart();
@@ -20,6 +20,7 @@ public class ChanceField extends Field{
             move5Fields();
         if(randomChanceCard==3)
             moveToSP();
+        return 0;
     }
     public void moveToStart(){
         piece.setLocation(0);
