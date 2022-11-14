@@ -15,8 +15,9 @@ public class Game {
 
     public void test () {
         board.makeFields();
+
         GUIController.guiCreateboard();
-        createPlayers(4);
+        createPlayers(GUIController.guiNumberOfPlayers());
         GUIController.guiCreatePieces(players.size());
         for(int i = 0 ; i < players.size();i++){
             GUIController.guiCreatePlayer(players.get(i).getName(),players.get(i).acc.getBalance(),i);
@@ -34,7 +35,7 @@ public class Game {
     public void createPlayers(int numberOfPlayers) {
         players = new ArrayList<Player>();
         for (int i = 0; i < numberOfPlayers; i++) {
-            Player newPlayer = new Player(input.nextLine());
+            Player newPlayer = new Player(GUIController.guiPlayerName());
             players.add(newPlayer);
         }
         for (int i = 0; i < numberOfPlayers; i++) {
