@@ -58,6 +58,17 @@ public class GUIController {
         gui.addPlayer(newplayer);
         gui_players[index] = newplayer;
     }
+
+    public int guiNumberOfPlayers(){
+        int temp;
+        temp = Integer.parseInt(gui.getUserButtonPressed("Vælg antal spillere","2","3","4"));
+        return temp;
+    }
+    public String guiPlayerName(){
+        String name = gui.getUserString("Indtast dit navn");
+        return name;
+    }
+
     public void print(String msg){
         gui.showMessage(msg);
     }
