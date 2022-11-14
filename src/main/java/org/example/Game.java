@@ -15,8 +15,8 @@ public class Game {
 
     public void test () {
         board.makeFields();
-        createPlayers(4);
         GUIController.guiCreateboard();
+        createPlayers(4);
         GUIController.guiCreatePieces(players.size());
         for(int i = 0 ; i < players.size();i++){
             GUIController.guiCreatePlayer(players.get(i).getName(),players.get(i).acc.getBalance(),i);
@@ -59,5 +59,13 @@ public class Game {
         //GUI gir besked om hvilket felt der er landet på og hvad der sker.
         board.fields[players.get(player).piece.getLocation()].landedOn(players.get(player));
         GUIController.print("Your turn is done. It is now " + players.get(player+1).getName() + "s turn!");
+    }
+    public int chooseWinner(){
+        int winner = 0;
+        for (int i = 0; i < players.size();i++){
+            if (players.get(winner).acc.getBalance() < players.get(i).acc.getBalance())
+                winner = i;
+        }
+        return winner;
     }
 }
