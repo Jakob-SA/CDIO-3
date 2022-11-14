@@ -10,10 +10,19 @@ public class Game {
     DieCup dieCup = new DieCup(6);
     Scanner input = new Scanner(System.in);
     Board board = new Board();
+    GUIController GUIController = new GUIController();
+
+
     public void test () {
         board.makeFields();
-        createPlayers(2);
-        System.out.println(players.size());
+        createPlayers(4);
+        GUIController.guiCreateboard();
+        GUIController.guiCreatePieces(players.size());
+        for(int i = 0 ; i < players.size();i++){
+            GUIController.guiCreatePlayer(players.get(i).getName(),players.get(i).acc.getBalance(),i);
+        }
+
+
 
 
     }
@@ -39,7 +48,6 @@ public class Game {
         }
     }
     public void takeTurn(Player player){
-
-
+        Helper.pressEnter("Press enter");
     }
 }
