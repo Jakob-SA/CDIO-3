@@ -2,8 +2,10 @@ package org.example;
 
 public class Die {
     private int faceValue;
-    private static int maxFaceValue;
-    public Die (int dieSide) {maxFaceValue = dieSide;}
+    private int maxFaceValue;
+    public Die (int sides) {
+        this.maxFaceValue = sides;
+    }
     public void roll () {
         faceValue = (int)(Math.random()*maxFaceValue)+1;
     }

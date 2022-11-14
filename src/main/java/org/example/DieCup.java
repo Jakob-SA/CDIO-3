@@ -2,9 +2,11 @@ package org.example;
 
 public class DieCup {
     private int dieSum;
-    private static int maxFaceValue;
-    public DieCup (int dieSides){maxFaceValue = dieSides;}
-    Die die1 = new Die(maxFaceValue);
+    private int maxFaceValue;
+    public DieCup (int dieSides){
+        maxFaceValue = dieSides;
+    }
+    Die die1 = new Die(6);
     //Die die2 = new Die(maxFaceValue);
 
     public void shake () {

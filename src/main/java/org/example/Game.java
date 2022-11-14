@@ -21,9 +21,11 @@ public class Game {
         for(int i = 0 ; i < players.size();i++){
             GUIController.guiCreatePlayer(players.get(i).getName(),players.get(i).acc.getBalance(),i);
         }
-        while(true) {
+        while(players.get(counter % players.size()).acc.getBalance() >= 0) {
             takeTurn(players.get(counter % players.size()));
+            counter++;
         }
+        chooseWinner();
 
 
 
@@ -58,15 +60,15 @@ public class Game {
         player.piece.addLocation(dieCup.getDieSum());          //brikken flytter
         GUIController.print("You landed on " + board.fields[player.piece.getLocation()].toString());
         board.fields[player.piece.getLocation()].landedOn(player);
-        GUIController.print("Your turn is done. It is now " + players.get(players.indexOf(player)+1).getName() + "s turn!");
+        GUIController.print("Your turn is done. It is now " + players.get((players.indexOf(player)+1)%players.size()).getName() + "s turn!");
         GUIController.updatePlayer(players.indexOf(player), player.acc.getBalance(),player.piece.getLocation());
     }
-    public int chooseWinner(){
+    public void chooseWinner(){
         int winner = 0;
         for (int i = 0; i < players.size();i++){
             if (players.get(winner).acc.getBalance() < players.get(i).acc.getBalance())
                 winner = i;
         }
-        return winner;
+        GUIController.print("Winner is" + players.get(winner).toString());
     }
 }

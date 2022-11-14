@@ -48,16 +48,17 @@ public class GUIController {
 
     }
     public void guiCreatePieces (int numberOfPlayers){
+        cars = new GUI_Car[numberOfPlayers];
         for (int i = 0; i < numberOfPlayers; i++){
-            cars = new GUI_Car[numberOfPlayers];
             cars[i] = new GUI_Car();
             cars[i].setPosition(fields[0]);
         }
+        gui_players = new GUI_Player[cars.length];
     }
     public void guiCreatePlayer(String name, int balance,int index) {
-        gui_players = new GUI_Player[cars.length];
         GUI_Player newplayer = new GUI_Player(name,balance);
         gui.addPlayer(newplayer);
+        gui_players[index] = newplayer;
     }
 
     public int guiNumberOfPlayers(){
@@ -74,7 +75,8 @@ public class GUIController {
     }
     public void updatePlayer (int player, int bal, int pos) {
         gui_players[player].setBalance(bal);
-        cars[player].setPosition(fields[pos]);
+        gui_players[player].getCar().setPosition(fields[pos]);
+        //cars[player].setPosition(fields[pos]);
     }
 
     public void print(String msg){
