@@ -5,11 +5,10 @@ public class NoActionField extends Field {
     public NoActionField(String name) {
         super(name);
     }
-    public int landedOn(Player player){
-
-        return 0;
+    public String landedOn(Player player){
+        return "You landed on " + getName() + ". Not much to do here.";
     }
     public String toString(){
-        return "" + getName();
+        return getName();
     }
 }

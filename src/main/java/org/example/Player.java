@@ -29,6 +29,6 @@ public class Player {
         return playerNumber;
     }
     public String toString(){
-        return "Playernumber" + playerNumber+ name;
+        return name;
     }
 }

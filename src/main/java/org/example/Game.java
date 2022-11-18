@@ -58,10 +58,12 @@ public class Game {
         GUIController.print("Press OK to roll the die!");
         GUIController.setDie(dieCup.getDieSum());
         player.piece.addLocation(dieCup.getDieSum());          //brikken flytter
-        GUIController.print("You landed on " + board.fields[player.piece.getLocation()].toString());
-        board.fields[player.piece.getLocation()].landedOn(player);
-        GUIController.print("Your turn is done. It is now " + players.get((players.indexOf(player)+1)%players.size()).getName() + "s turn!");
+        GUIController.print("You rolled " + dieCup.getDieSum() + ". Press OK to move your piece.");
+
         GUIController.updatePlayer(players.indexOf(player), player.acc.getBalance(),player.piece.getLocation());
+        GUIController.print(board.fields[player.piece.getLocation()].landedOn(player));
+        GUIController.updatePlayer(players.indexOf(player), player.acc.getBalance(),player.piece.getLocation());
+        GUIController.print("Your turn is done. It is now " + players.get((players.indexOf(player)+1)%players.size()).getName() + "s turn!");
     }
     public void chooseWinner(){
         int winner = 0;

@@ -13,15 +13,17 @@ public class PropertyField extends Field {
         this.owner = owner;
     }
 
-    public int landedOn(Player player) {
+    public String landedOn(Player player) {
         if (owner == null){
             setOwner(player);
             setPlayerName(player.getName());
             player.acc.addBalance(-buyPrice);
-            return buyPrice;
-        } else{
+            return "You have bought " + getName() + " for " + buyPrice;
+        } else if (owner != player){
             player.acc.payRent(owner.acc,buyPrice);
-            return buyPrice;
+            return "You landed on " + getName() + " and payed " + buyPrice +" in rent to " + owner + "." ;
+        }else {
+            return "You landed on " + getName() + ". You already own this property.";
         }
     }
 
@@ -35,7 +37,7 @@ public class PropertyField extends Field {
         return buyPrice;
     }
     public String toString(){
-        return super.getName() + ". The owner is " + playerName;
+        return getName();
     }
 
 
