@@ -12,7 +12,7 @@ public abstract class Field {
     }
 
 
-    public abstract int landedOn(Player player);
+    public abstract String landedOn(Player player);
 
 
 }
