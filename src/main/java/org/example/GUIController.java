@@ -19,30 +19,30 @@ public class GUIController {
 
     public void guiCreateboard (){
             fields = new GUI_Field[]{
-                    new GUI_Start("Start", "start", "2M", Color.red, Color.black),
-                    new GUI_Street("Burgerbaren", "Burgerbaren", "Burgerbaren", "1", Color.yellow, Color.black),
-                    new GUI_Street("Pizzahuset", "Pizzahuset", "Pizzahuset", "1", Color.yellow, Color.black),
-                    new GUI_Chance("Chancefelt nr. 1", "Chancefelt nr. 1", "Chancefelt nr. 1", Color.white, Color.black),
-                    new GUI_Street("Slikbutikken", "Slikbutikken", "Slikbutikken", "1", Color.blue, Color.black),
-                    new GUI_Street("Is-koisken", "Is-koisken", "Is-koisken", "1", Color.blue, Color.black),
-                    new GUI_Refuge("", "Fængsel på besøg", "Fængsel på besøg", "Fængsel på besøg", Color.white, Color.black),
-                    new GUI_Street("Musset", "Musset", "Musset", "2", Color.pink, Color.black),
-                    new GUI_Street("Biblioteket", "Biblioteket", "Biblioteket", "2", Color.pink, Color.black),
-                    new GUI_Chance("Chancefelt nr. 2", "Chancefelt nr. 2", "Chancefelt nr. 2", Color.white, Color.black),
-                    new GUI_Street("Skaterparken", "Skaterparken", "Skaterparken", "2", Color.orange, Color.black),
-                    new GUI_Street("Swimmingpoolen", "Swimmingpoolen", "Swimmingpoolen", "2", Color.orange, Color.black),
-                    new GUI_Refuge("", "Gratis parkering", "Gratis parkering", "Gratis parkering", Color.white, Color.black),
-                    new GUI_Street("Spillehallen", "Spillehallen", "Spillehallen", "3", Color.red, Color.black),
-                    new GUI_Street("biografen", "Biografen", "Biografen", "3", Color.red, Color.black),
-                    new GUI_Chance("Chancefelt nr. 3", "Chancefelt nr. 3", "Chancefelt nr. 3", Color.white, Color.black),
-                    new GUI_Street("Legetøjsbutikken", "Legetøjsbutikken", "Legetøjsbutikken", "3", Color.magenta, Color.black),
-                    new GUI_Street("Dyrehandlen", "Dyrehandlen", "Dyrehandlen", "3", Color.magenta, Color.black),
-                    new GUI_Jail("", "Gå i fængsel", "Gå i fængsel", "Gå i Fængsel", Color.white, Color.black),
-                    new GUI_Street("Bowllinghallen", "Bowllinghallen", "Bowllinghallen", "4", Color.green, Color.black),
-                    new GUI_Street("Zoo", "Zoo", "Zoo", "4", Color.green, Color.black),
-                    new GUI_Chance("Chancefelt nr. 4", "Chancefelt nr. 4", "Chancefelt nr. 4", Color.white, Color.black),
-                    new GUI_Street("Vandland", "Vandland", "Vandland", "5", Color.cyan, Color.black),
-                    new GUI_Street("Strandpromenaden", "Strandpromenaden", "Strandpromenaden", "5", Color.cyan, Color.black),
+                    new GUI_Start("Start", "", "2M", Color.red, Color.black),
+                    new GUI_Street("Burgerbaren", "Pris/Leje : 1M", "Spis en lækker burger", "1", Color.yellow, Color.black),
+                    new GUI_Street("Pizzahuset", "Pris/Leje : 1M", "10 minutter min ven", "1", Color.yellow, Color.black),
+                    new GUI_Chance("?", "Chancefelt", "", Color.white, Color.black),
+                    new GUI_Street("Slikbutikken", "Pris/Leje : 1M", "Køb en god bland-selv pose", "1", Color.GRAY, Color.black),
+                    new GUI_Street("Is-kiosken", "Pris/Leje : 1M", "Is til en varm sommerdag", "1", Color.GRAY, Color.black),
+                    new GUI_Refuge("", "", "På besøg", "Du er på besøg i fængslet", Color.white, Color.black),
+                    new GUI_Street("Museet", "Pris/Leje : 2M", "", "2", Color.pink, Color.black),
+                    new GUI_Street("Biblioteket", "Pris/Leje : 2M", "Læs en bog", "2", Color.pink, Color.black),
+                    new GUI_Chance("?", "Chancefelt","Chancefelt", Color.white, Color.black),
+                    new GUI_Street("Skaterparken", "Pris/Leje : 2M", "Skaterparken", "2", Color.orange, Color.black),
+                    new GUI_Street("Swimmingpoolen", "Pris/Leje : 2M", "Tag en dukkert", "2", Color.orange, Color.black),
+                    new GUI_Refuge("", "Gratis parkering", "Parkering", "Tag en pause", Color.white, Color.black),
+                    new GUI_Street("Spillehallen", "Pris/Leje : 3M", "Værs'go at gå amok", "3", Color.red, Color.black),
+                    new GUI_Street("Biografen", "Pris/Leje : 3M", "Se en god film", "3", Color.red, Color.black),
+                    new GUI_Chance("?", "Chancefelt", "Chancefelt", Color.white, Color.black),
+                    new GUI_Street("Legetøjsbutikken", "Pris/Leje : 3M", ";)", "3", Color.magenta, Color.black),
+                    new GUI_Street("Dyrehandlen", "Pris/Leje : 3M", "Guldfisk til salg", "3", Color.magenta, Color.black),
+                    new GUI_Jail("", "Gå i fængsel", "Gå i fængsel", "Gå i fængsel", Color.white, Color.black),
+                    new GUI_Street("Bowlinghallen", "Pris/Leje : 4M", "Strike!", "4", Color.green, Color.black),
+                    new GUI_Street("Zoologisk Have", "Pris/Leje : 4M", "Søde pingviner", "4", Color.green, Color.black),
+                    new GUI_Chance("?", "Chancefelt", "Chancefelt", Color.white, Color.black),
+                    new GUI_Street("Vandland", "Pris/Leje : 5M", "Velkommen til Lalandia", "5", Color.cyan, Color.black),
+                    new GUI_Street("Strandpromenaden", "Pris/Leje : 5M", "Nyd solen", "5", Color.cyan, Color.black),
             };
         gui = new GUI(fields);
 
@@ -82,4 +82,6 @@ public class GUIController {
     public void print(String msg){
         gui.showMessage(msg);
     }
+
+
 }
