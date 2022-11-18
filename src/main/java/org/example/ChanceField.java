@@ -10,7 +10,7 @@ public class ChanceField extends Field{
             player.piece.setLocation(0);
         }
         if(randomChanceCard == 2){
-            player.piece.addLocation(5);
+            player.piece.addLocation(5,player);
         }
         if(randomChanceCard == 3){
             player.piece.setLocation(23);

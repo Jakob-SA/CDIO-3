@@ -27,9 +27,6 @@ public class Game {
         }
         chooseWinner();
 
-
-
-
     }
 
     public void createPlayers(int numberOfPlayers) {
@@ -57,7 +54,7 @@ public class Game {
         dieCup.shake();
         GUIController.print("Press OK to roll the die!");
         GUIController.setDie(dieCup.getDieSum());
-        player.piece.addLocation(dieCup.getDieSum());          //brikken flytter
+        player.piece.addLocation(dieCup.getDieSum(),player);          //brikken flytter
         GUIController.print("You rolled " + dieCup.getDieSum() + ". Press OK to move your piece.");
 
         GUIController.updatePlayer(players.indexOf(player), player.acc.getBalance(),player.piece.getLocation());
