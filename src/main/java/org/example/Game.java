@@ -10,6 +10,7 @@ public class Game {
     DieCup dieCup = new DieCup(6);
     Scanner input = new Scanner(System.in);
     Board board = new Board();
+
     GUIController GUIController = new GUIController();
 
     public void test () {
@@ -31,8 +32,7 @@ public class Game {
             GUIController.guiCreatePlayer(players.get(i).getName(),players.get(i).acc.getBalance(),i);
         }
         GUIController.print("Jeg tester lige");
-        takeTurn(0);
-        players.get(0).piece.setLocation(0);
+
 
 
 
@@ -82,4 +82,6 @@ public class Game {
     public List<Player> getPlayers() {
         return players;
     }
+    public Board getBoard() {return board;}
+    public void setGUIController(org.example.GUIController GUIController) {this.GUIController = GUIController;}
 }

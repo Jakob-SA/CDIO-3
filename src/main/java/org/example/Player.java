@@ -31,4 +31,8 @@ public class Player {
     public String toString(){
         return "Playernumber" + playerNumber+ name;
     }
+
+    public Piece getPiece() {
+        return piece;
+    }
 }
