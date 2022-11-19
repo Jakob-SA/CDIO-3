@@ -12,12 +12,20 @@ public class Game {
     Board board = new Board();
     GUIController GUIController = new GUIController();
 
-
     public void test () {
         board.makeFields();
 
         GUIController.guiCreateboard();
-        createPlayers(GUIController.guiNumberOfPlayers());
+
+        int numberOfPlayers = GUIController.guiNumberOfPlayers();
+        String[] playerNames = new String[numberOfPlayers];
+
+        for (int i = 0; i < playerNames.length; i++) {
+            playerNames[i] = GUIController.guiPlayerName();
+        }
+
+        createPlayers(numberOfPlayers, playerNames);
+
         GUIController.guiCreatePieces(players.size());
         for(int i = 0 ; i < players.size();i++){
             GUIController.guiCreatePlayer(players.get(i).getName(),players.get(i).acc.getBalance(),i);
@@ -30,12 +38,13 @@ public class Game {
 
 
 
+
     }
 
-    public void createPlayers(int numberOfPlayers) {
+    public void createPlayers(int numberOfPlayers, String[] playerNames) {
         players = new ArrayList<Player>();
         for (int i = 0; i < numberOfPlayers; i++) {
-            Player newPlayer = new Player(GUIController.guiPlayerName());
+            Player newPlayer = new Player(playerNames[i]);
             players.add(newPlayer);
         }
         for (int i = 0; i < numberOfPlayers; i++) {

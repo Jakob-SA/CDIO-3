@@ -9,21 +9,24 @@ class GameTest1 {
     @org.junit.jupiter.api.Test
     public void testOfCreatePlayers() {
         Game game = new Game();
-        game.createPlayers(2);
+        String[] playerNames = new String[]{"Jarl", "bongo"};
+        game.createPlayers(2, playerNames);
         int actual = game.getPlayers().size();
         assertEquals(2, actual);
     }
 /**
     @org.junit.jupiter.api.Test
     void testOfTakeTurn() {
-        DieCup dieCup = new DieCup(6);
-        //game.takeTurn(2);
+        Game game = new Game();
+        String[] playerNames = new String[]{"Jarl", "bongo"};
+        game.createPlayers(2, playerNames);
+        game.takeTurn(2);
         assertEquals(6, 6);
-    }
+ }
 
-    @org.junit.jupiter.api.Test
-    void chooseWinner() {
+ @org.junit.jupiter.api.Test
+ void chooseWinner() {
 
-    }
-    **/
+ }
+ **/
 }
