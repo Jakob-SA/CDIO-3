@@ -1,6 +1,6 @@
 package org.example;
 
-public class PropertyField extends Field {
+public class  PropertyField extends Field {
     private int  buyPrice;
     private int rent;
     private String playerName;

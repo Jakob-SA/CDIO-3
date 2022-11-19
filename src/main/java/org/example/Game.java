@@ -69,4 +69,8 @@ public class Game {
         }
         return winner;
     }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
 }
