@@ -11,9 +11,10 @@ public class Game {
     Scanner input = new Scanner(System.in);
     Board board = new Board();
 
-    GUIController GUIController = new GUIController();
+    GUIController GUIController;
 
     public void test () {
+        GUIController = new GUIController();
         board.makeFields();
 
         GUIController.guiCreateboard();
@@ -68,7 +69,8 @@ public class Game {
         players.get(player).piece.addLocation(dieCup.getDieSum());          //brikken flytter
         //GUI gir besked om hvilket felt der er landet på og hvad der sker.
         board.fields[players.get(player).piece.getLocation()].landedOn(players.get(player));
-        GUIController.print("Your turn is done. It is now " + players.get(player+1).getName() + "s turn!");
+
+        if (this.GUIController!=null) GUIController.print("Your turn is done. It is now " + players.get(player+1).getName() + "s turn!");
     }
     public int chooseWinner(){
         int winner = 0;
