@@ -1,11 +1,11 @@
 package org.example;
 
 public class ChanceField extends Field{
+        int  randomChanceCard = (int)(Math.random()*3)+1;   //Random chancecard chosen
     public ChanceField(String name) {
         super(name);
     }
     public String landedOn(Player player){
-        int  randomChanceCard = (int)(Math.random()*3)+1;   //Random chancecard chosen
         if(randomChanceCard == 1){
             player.piece.setLocation(0);
         }

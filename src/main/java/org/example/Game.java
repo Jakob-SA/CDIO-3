@@ -10,6 +10,8 @@ public class Game {
     DieCup dieCup = new DieCup(6);
     Board board = new Board();
     GUIController GUIController = new GUIController();
+    ChanceField chanceField = new ChanceField("");
+
     private int counter = 0;
 
 
@@ -56,7 +58,7 @@ public class Game {
         GUIController.setDie(dieCup.getDieSum());
         player.piece.addLocation(dieCup.getDieSum(),player);          //brikken flytter
         GUIController.print("You rolled " + dieCup.getDieSum() + ". Press OK to move your piece.");
-
+        checkChanceCard(player);
         GUIController.updatePlayer(players.indexOf(player), player.acc.getBalance(),player.piece.getLocation());
         GUIController.print(board.fields[player.piece.getLocation()].landedOn(player));
         GUIController.updatePlayer(players.indexOf(player), player.acc.getBalance(),player.piece.getLocation());
@@ -69,5 +71,15 @@ public class Game {
                 winner = i;
         }
         GUIController.print("Winner is" + players.get(winner).toString());
+    }
+    public void checkChanceCard(Player player){
+        if(player.piece.getLocation()==3 || player.piece.getLocation()==9 || player.piece.getLocation()==15 || player.piece.getLocation()==21) {
+            if (chanceField.randomChanceCard == 1)
+                GUIController.gui.displayChanceCard("Ryk til start");
+            if (chanceField.randomChanceCard == 2)
+                GUIController.gui.displayChanceCard("Ryk 5 felter frem");
+            if (chanceField.randomChanceCard == 3)
+                GUIController.gui.displayChanceCard("Ryk til Strandpromenaden");
+        }
     }
 }
