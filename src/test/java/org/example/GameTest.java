@@ -9,7 +9,7 @@ class GameTest {
 
     @org.junit.jupiter.api.Test
     void testNumberOfcreatedPlayers() {
-        game.createPlayers(4);
+        game.createPlayer("test");
         assertEquals(4,game.players.size());
     }
     @org.junit.jupiter.api.Test
