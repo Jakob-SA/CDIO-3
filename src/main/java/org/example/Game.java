@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 public class Game {
-    List<Player> players;
+    List<Player> players = new ArrayList<Player>();
     DieCup dieCup = new DieCup(6);
     Board board = new Board();
     GUIController GUIController = new GUIController();
@@ -19,6 +19,7 @@ public class Game {
         createPlayers(GUIController.guiNumberOfPlayers());
         GUIController.guiCreatePieces(players.size());
         for(int i = 0 ; i < players.size();i++){
+            createPlayers();
             GUIController.guiCreatePlayer(players.get(i).getName(),players.get(i).acc.getBalance(),i);
         }
         while(players.get(counter % players.size()).acc.getBalance() >= 0) {
