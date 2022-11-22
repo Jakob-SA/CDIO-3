@@ -31,10 +31,14 @@ class GameTest1 {
         assertEquals(startPosition, 0);
         assertNotEquals(positionAfterTurn, 0);
     }
-/**
- @org.junit.jupiter.api.Test
- void chooseWinner() {
 
- }
- **/
+    @org.junit.jupiter.api.Test
+    void chooseWinner() {
+        Game game = new Game();
+        Account acc = new Account();
+        String[] playerNames = new String[]{"Jarl", "Bongo"};
+        game.createPlayers(2, playerNames);
+        acc.setBalance(-1);
+
+    }
 }
