@@ -5,6 +5,8 @@ public class Main {
         System.out.println("hello");
         Game game = new Game();
         game.gameStart();
+        game.playGame();
+
 
     }
 
