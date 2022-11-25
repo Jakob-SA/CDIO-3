@@ -11,7 +11,7 @@ public class Player {
 
     private String name;
     private static int playerCount = 1;
-    private int playerNumber;
+    private final int playerNumber;
 
     public Player (String name){
         this.name = name;
