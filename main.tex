@@ -31,7 +31,10 @@
 
 \normalsize
 \begin{abstract}
-Der er på baggrund af kundens vision og krav er der blevet udviklet et Monopoly Junior spil. Efter kundens vision og krav var der egentligt rig mulighed for at forme sit Monopoly Junior spil efter eget ønske. En analyse er blevet lavet, hvor der er blevet produceret en række diagrammer, som har været hele forarbejdet til hele dette projekt. Der er også blevet lavet en bruger venlig test samt nogle test cases. Test casene illustrer de problemer, som projektet har stødt på, og den bruger venlige test er blevet lavet af unge mennesker som bor på kollegie, for at vise at mennesker, som ikke er en del af dette projekt eller ligende også kan spille det programmeret spil. Afslutningsvis kan det blevet konkluderet at spillet fungere som det skal, og at det kan spilles af andre mennesker som ikke er en del af dette projekt.
+This report documents our process in the making of Monopoly Junior. Our product of the game has been produced partly by the costumers vision and partly on the prioritesed list of requirements/rules that we made at the start of the project.
+This report documents the initial analysis of the problem, the requiremts analysis, the design of the game in form of different diagrams, other artifacts and our different tests.
+
+
 \end{abstract}
 \break 
 
@@ -39,17 +42,29 @@ Der er på baggrund af kundens vision og krav er der blevet udviklet et Monopoly
 \break 
 
 \section{Timeregnskab}
-
+\begin{itemize}
+    \item Arbejdsdag 1: 2 timer
+    \item Arbejdsdag 2: 1.5 timer
+    \item Arbejdsdag 3: 1.5 timer
+    \item Arbejdsdag 4: 2 timer
+    \item Arbejdsdag 5: 2.5 timer
+    \item Arbejdsdag 6: 4 timer
+    \item Arbejdsdag 7: 1.5 timer 
+    \item Arbejdsdag 8: 3 timer
+    \item Arbejdsdag 9: 2 timer
+    \item Arbejdsdag 10: 2 timer
+    \item Arbejdsdag 11: 2 timer
+\end{itemize}
 \section{Indledning}
-I følgende rapport bliver hele handlings forløbet af vores CDIO-3 projekt beskrevet, samt dokumentation af denne proces. Rapporten giver kendskab til udviklingsmetoderne, som er brugt i processen. Projektet tager udgangspunkt i i børne spillet Monopoly Junior, men med mulighed for at implementere eller tilføje relevante ting. Der har været fokus på at bruge Rational Unified Process, som derfor har ført til små iterationer, evalueringer og opsamlinger under hele forløbet, både på forarbejdet og under programmerings delen, for hele tiden at sikre os at programmet køre som det skulle. Derudover er der blevet produceret en række diagrammer, som har overskuelig gjort opgaven, og dermed også nemmere at gå til. Der har været fokus på at bruge Low Coupling og High Cohesion til at lave diagrammeren. Dette kan ses da der har været fokus på nedarvning i diagrammerne, så klasserne arver metoder og variabler fra hianden. 
+I følgende rapport bliver hele handlingsforløbet af vores CDIO-3 projekt beskrevet, samt dokumentation af denne proces. Rapporten giver kendskab til udviklingsmetoderne, som er brugt i processen. Projektet tager udgangspunkt i børnespillet Monopoly Junior, men med mulighed for at implementere eller tilføje relevante ting. Der har været fokus på at bruge Rational Unified Process, som derfor har ført til små iterationer, evalueringer og opsamlinger under hele forløbet, både på forarbejdet og under programmerings delen, for hele tiden at sikre os at programmet kører som det skulle. Derudover er der blevet produceret en række diagrammer, som har overskueliggjort opgaven. Der har været fokus på at bruge Low Coupling og High Cohesion til at lave diagrammerne. Dette kan ses da der har været fokus på nedarvning i diagrammerne, så klasserne arver metoder og variabler fra hinanden. 
 
 \section{Projekt-planlægning}
 \begin{itemize}
-    \item [1/11] Her laver vi en smule opgaveprioritering og udarbejder en hurtig kravsliste over funktionelle krav.\\
+    \item [1/11] I denne session arbejder vi på udfærdigelsen af opgaveprioritering og udarbejder en kravsliste over funktionelle krav.\\
     Evaluering på dagen: Alt nået
-    \item [2/11] Lave en primær use case beskrivelse (brief) og identificere andre sub-use cases. Udarbejde et use case diagram og starte på domænemodel.\\
-    Evaluering på dagen: Alt nået, samt domænemodel færdiggjort og start på designklasse diagrammet. Vi har implementeret de første og simpleste klasser i IntelliJ.
-    \item [4/11] Denne dag skal der laves system sekvensdiagram samt sekvensdiagram.
+    \item [2/11] I denne session vil udarbejde en primær use case beskrivelse (brief) og identificere andre sub-use cases. Udarbejde et use case diagram og starte på domænemodel.\\
+    Evaluering på dagen: Alt nået, samt domænemodel færdiggjort og start på designklasse diagrammet. Vi har implementeret de første og mest simple klasser i IntelliJ.
+    \item [4/11] Denne dag skal der laves systemsekvensdiagram samt sekvensdiagram.
     \item [7/11]
     Afklaring af hvilke regler vi vil implementere og hvilke vi vil udelade, udover dem fra vores kravspecifikation. Design og test af boardclass og squareclass.
     \item [11/11]
@@ -57,124 +72,102 @@ I følgende rapport bliver hele handlings forløbet af vores CDIO-3 projekt besk
     Færdiggjort strukturen af vores domæne/klassediagram. Få oprettet alle klasser samt toString metoder, samt toString metode til array. Oprettet og begynde små test i game class. Alt nået.
     
     \item [14/11]
-    Opgaver løst: GUI implementeret. game funktionalitet implementeret og  første version af spillet færdigt. 
-    Opgaver til næste gang: Implementere chancekort. Beskrivelse (output til spilleren) til felter og actions. Identificere Test og test cases.
+    Opgaver løst: GUI implementeret. Game funktionalitet implementeret og  første version af spillet færdigt. 
+    
+    Opgaver til næste session: Implementere chancekort. Beskrivelse (output til spilleren) til felter og actions. Identificere test og test cases.
     
     \item[15/11]
-            Gennemgang af hvad programmet mangler, hvilke opgaver der skal løses og i hvilken rækkefølge,  og uddelegering af opgaver til enkeltmand.
-            *Insert billede af tavle*
-            
+            Gennemgang af hvad programmet mangler, hvilke opgaver der skal løses og i hvilken rækkefølge,  og uddelegering af opgaver til enkeltmand. * Se billede Plan Banan * 
+
+\begin{figure} [h]
+        \centering
+            \includegraphics[width = 1.0
+            \textwidth]{Billeder/planBanan.png}
+            \caption{Plan Banan}
+            \label{PlanBanan}
+    \end{figure}
+     
     \item[18/11]
             Folk laver tildelte opgaver, og en opsamling til sidst. 
-            *refererer til billede af tavle*.
+            * Se billede Plan Banan*.
            
-            Opsamling: Opgaver ikke nået; Junittest, gui-implementation af chancekort. Ansvarlige færdiggører s i weekend inden næste session.
+            Opsamling: Opgaver ikke nået; JUnittest, GUI-implementation af chancekort. Ansvarlige færdiggøres i weekend inden næste session.
                       
-    \item [18/11]
-    Bugs identificerede:
-    Betaler først rent til den modtagen spiller runden efter.
-    Køber ikke felt man lander på efter man har trukket chancekort
-    Efter man har trukket et chancekort og lander på strandpromenaden, køber man ikke feltet. 
-    Mulig problem løsning OG testcase: chancekortene kører kun 'set-loaction' metoden men ikke 'addlocation' metoden hvilket gør at spillerne ikke modtager penge når de har været i forbindelse med et chancekort
     \item [22/11]
-    Sidste bugs vi har identificeret er løst, flere er dog identificerede men givet tiden givet til rådighed, vælger vi at lav code-freeze og fokusere på færdiggørelsen af rapporten. Den blvier skrevet færdig d. 25/11.
+    Sidste bugs vi har identificeret er løst, flere er dog identificeret men givet tiden til rådighed, vælger vi at lav code-freeze og fokusere på færdiggørelsen af rapporten. Den bliver skrevet færdig d. 25/11.
+	\item[21/11]
+    Gennemgang af de tildelte opgaver, og videre arbejde af dem, hvis der er mangler. Code Freeze
+            
+    \item[25/11]
+    Rapporten skal færdiggøres og afleveres.
 \end{itemize}
-			efter vi har lavet vores design klasse diagram vil starte med at lave den klasse der har færrest bindinger til de andre 
-
-		 \item[21/11]
-            Gennemgang af de tildelte opgave, og videre arbejde af dem, hvis der er mangler. 
 
 		
 \section{Krav/Analyse}
 \subsection{Kravsliste | funktionelle krav}
 \begin{enumerate}
-    \item Skal kunne spilles af 2-4 spillere
-    \item Spilleplade med 24 felter
-    \item Man skal kunne købe og derefter eje felter
-    \item Spillerne skal have hver deres pengebeholdning
-    \item Hvis én pengebeholdning går i minus slutter spillet
-    \item En terning med seks sider
-    \item En brik per spiller, som kan rykke
-    \item 
+    \item Skal kunne spilles af 2-4 spillere (opfyldt)
+    \item Spilleplade med 24 felter (opfyldt)
+    \item Man skal kunne købe og derefter eje felter (opfyldt)
+    \item Spillerne skal have hver deres egen pengebeholdning (opfyldt)
+    \item Hvis én af spillernes pengebeholdning går i minus slutter spillet (opfyldt)
+    \item En terning med seks sider (opfyldt)
+    \item En brik per spiller, som kan rykke (opfyldt)
 \end{enumerate}
 \subsection{Prioritering af krav vi vil implementere, når de funktionelle krav er opfyldt}
 \begin {itemize}
-\item Vi implementerer 3 af chancekortenes funktioner. Hvis der er tid implementere vi flere slags chancekort.
-\item Fængsel felt og funktion bliver ikke implementeret. I stedet bliver de felter 'NonactionsFields'
-\item Man får ikke mulighed for at vælge bil/farve men får blot tildelt en i starten af spillet.
-\item  Spilstarteren bliver  den spiller der først indtaster sit navn
-\item Spillerne starter med et tilpasset antal schmoney alt efter antal spillere
-\item Spillere modtager penge ved landing eller passering af 'Start'-felt
-\item hvis spilleren lander på et ledigt ejendeomsfelt, skal spillere købe det. Hvis spilleren lander på sit eget feldt skal spilleren ikke gøre noget. Dobbelt-ejendomsfelt reglen er udeladt.
-\item Hvis spilleren lander på en andens ejendomsfelt, skal spilleren betale husleje.
-\item Hvis 2 spillere har ens cash, i slutningen af spillet bliver værdien af deres ejedoms også sammentalt for at finde en endelig vinder.
+\item Vi implementerer 3 af chancekortenes funktioner. Hvis der er tid implementere vi flere slags chancekort. (implementeret)
+\item Fængsel felt og funktion bliver ikke implementeret. I stedet bliver de felter 'NoActionsFields' (ej implementeret)
+\item Man får ikke mulighed for at vælge bil/farve men får blot tildelt en i starten af spillet. (ej implementeret)
+\item  Spilstarteren bliver  den spiller der først indtaster sit navn (implementeret)
+\item Spillerne starter med et tilpasset antal penge alt efter antal spillere (implementeret)
+\item Spillere modtager penge ved landing eller passering af 'Start'-felt (implementeret)
+\item Hvis spilleren lander på et ledigt ejendeomsfelt, skal spillere købe det. Hvis spilleren lander på sit eget felt skal spilleren ikke gøre noget. Dobbelt-ejendomsfelt reglen er udeladt.(implementeret)
+\item Hvis spilleren lander på en andens ejendomsfelt, skal spilleren betale husleje. (implementeret)
+\item Hvis 2 spillere har den samme pengebeholdning, i slutningen af spillet bliver værdien af deres ejedoms også sammentalt for at finde en endelig vinder. (ej implementeret)
 \end {itemize}
-\subsection{Use case beskrivelse }
-\textbf{Scope:} Spil Monopoly Junoir  
+\subsection{Use case beskrivelse og analyse }
+\textbf{Use case på 'brief format'}\\
+Spillerene indtaster hvor mange spillere de er, og skriver derefter navnene på deres brikker som de vil have vist i spillet. Første spiller slår med ternigen, og rykker det antal øjne som terningen viser. Systemet udfører derefter handlingen for det pågældende felt som spilleren er landet på. Turen går derefter videre til næste spiller.
 \\
-\textbf{Level:}
+\\
+\textbf{Use case beskrevet på 'fully dressed' format}
+\\
+\textbf{Scope:} Spil Monopoly Junior 
+\\
+\textbf{Level:} Spillere
 \\
 \textbf{Primary actor:} Spillere 2 - 4 
 \\
-\textbf{Stakeholders and interests:} 
-\item Spillerne vil spille et underholdende spil med formål at vinde. 
-\item Projektvejlederen vil have et Monopoly Junoir spil, som vil tilfredsstille kundens vision og krav
-\item Kunden vil have et monopoly spil, som har taget udgangspunkt i den fremlagte vision og de dertil hørende Monopoly Junoir regler 
-\\
-\textbf{Preconditions:} Computeren, som skal køre Monopoly Junoir skal have den nyeste version af Java. 
-\\
-\textbf{Succes guarantee:} Når en spiller går fallit tæller man sammen og finder en vinder 
-
-\textbf{Sub use cases (beskrevet på 'brief format'):}
+\textbf{Stakeholders and interests} 
 \begin{itemize}
-    \item Ryk brik
-    \item Vælg spillere
-    \item Slå terninger
-    \item Ændre pengebeholdning
-    \item Skift tur
-    \item Køb felt
+    \item Spillerne vil spille et underholdende spil med formål at vinde. 
+    \item Projektvejlederen vil have et Monopoly Junior spil, som vil tilfredsstille kundens vision og krav
+    \item Kunden vil have et monopolyspil, som har taget udgangspunkt i den fremlagte vision og de dertil hørende Monopoly Junior regler 
 \end{itemize}
-
-\textbf{Use case skrevet på 'fully dressed' format:}\\
-
-
+\\
+\textbf{Preconditions:} Computeren, som skal køre Monopoly Junior skal have den nyeste version af Java. 
+\\
+\textbf{Succes guarantee:} Spilleren har slået med terningerne, rykket sine brikker og evt. købt/betalt/fået beløb, og turen er gået videre til næste spiller. 
+\\
+\\
 \textbf{Main Scenario}
 \begin{enumerate}
 \itemsep-0.5em
-    \item Første spiller slår med terningerne
-    \item Systemet lægger øjnene på terningerne sammen.
+    \item Første spiller slår med terningen
     \item Første spillers brik bliver nu rykket det antal felter som terningernes øjne viser.
     \item Spilleren lander på et felt og systemet fortæller hvilket felt man er landet på.
     \item Systemet fortæller hvilken handling eller hvad feltet gør\\
     \textit{Punkterne 1-5 bliver nu gentaget for næste spiller}
 \end{enumerate}
 
-\textbf{Main Succes Scenario}
-\begin{enumerate}
-\itemsep-0.5em
-    \item Spilleren har slået med terningerne, rykket sine brikker og evt. købt/betalt/fået beløb, og turen er gået videre til næste spiller. 
-\end{enumerate}
 \textbf{Extension (Alternate Succes Scenario): }
 \begin{enumerate}
-    \item [4.a] Spilleren lander p̊a en grund der ikke er købt endnu. Systemet fortæller spilleren hvilket felt de er landet på. Spilleren har dog ikke nok penge til at betale feltets pris.
+    \item [4.a] Spilleren lander på en grund der ikke er købt endnu. Systemet fortæller spilleren hvilket felt de er landet på. Spilleren har dog ikke nok penge til at betale feltets pris.
     \subitem 1. Spillet slutter da en spiller er gået fallit. Alle spillernes pengebeholdning bliver talt op, og den med flest penge vinder.
     \item [4.b] Spilleren lander på en grund der er købt. System fortæller spilleren hvilket felt de er landet på, og spilleren betaler samtidig husleje til spilleren som ejer feltet.
     \item [4.c] Spilleren lander på et felt uden handling.
 \end{enumerate}
-
-\section{Design}
-Med henblik på at skabe det mest optimale Monopoly Junior, er der blevet fremstillet en række diagrammer, med formål at gøre opgaven mere overskuelig og dermed også nemmere. Det har været med fokus 	at bruge Low Coupling og High Cohesion til at lave diagrammerne.
-\\
-
-\begin{figure} [h]
-    \centering
-    \includegraphics[width = 0.4\textwidth]{Billeder/Domænemodel.png}
-    \caption{Domænemodel}
-    \label{Domænemodel}
-\end{figure}
-Vores domæne model(Figur 1) er centralisereret omkring klassen game. Game klasen centralisereret programmet omkring game, da det giver mening at give en klasse som skal holde de andre. Man kan se at ud fra klassen Game, hvilke rolle de forskellige klasser har og hvordan de er bundet sammen. Der er hermed blevet brugt Low Coupling og High Cohesion, hvor der blevet gjort at hver enkel klasse er uafhængige som de kan være.  Klassen Field er blevet gjort til en abstract klasse, fordi klasserne Property-, Chance- og NoAntionField alle arve det samme fra Field klassen. Det er derfor smart at gøre dette til en abstract klasse, da det igen giver en bedre Low Coupling.
-\\
-
 
 \begin{figure} [h]
     \centering
@@ -187,39 +180,72 @@ Dette use case diagram(Figur 2) viser hvordan spilleren og systemet interagere m
 
 \begin{figure} [h]
     \centering
+    \includegraphics[width = 0.4\textwidth]{Billeder/Domænemodel.png}
+    \caption{Domænemodel}
+    \label{Domænemodel}
+\end{figure}
+
+Vores domænemodel (figur 1) giver os et overblik over hvilke, og hvor mange, elementer der skal være med i vores spil, og hvilken sammenhæng de har. De forskellige delelementer i domænemoddellen er reelle objekter vi vil have med i vores spil, og de danner inspirationsgrundlag til vores design klasse diagram hvor vi kan lave en næsten direkte overførsel fra 'virkelige objekter' til klasser.
+
+\section{Design}
+For at give os selv et overblik over spillet, hvordan vores domæne skal se ud, hvilke klasser vi vil implementere og, hvordan system og aktør skal interagere med hinanden, har vi lavet følgende diagrammer.
+\\
+
+\begin{figure} [h]
+    \centering
     \includegraphics[width = 0.4\textwidth]{Billeder/Systemsekvensdiagram.png}
-    \caption{System sekvens diagram}
-    \label{System sekvens diagram}
+    \caption{Systemsekvensdiagram}
+    \label{Systemsekvensdiagram}
 \end{figure}
-Vores system sekvens diagramFigur 3) illustrere, hvordan vores Monopoly Junior kommer til at forløbe sig overordnet. Diagrammet viser hvordan en sekvens af bedskeder går frem og tilbage over tid fra Players til System og fra System til Players. Diagrammet illustrere at man kun skal starte spillet, vælge antal spillere og slå terning, resten gør system, som giver bedskeder tilbage til spilleren om hvad man har slået, hvor man rykker hen og hvad feltet man lander på gør.     
+Vores system sekvens diagram (Figur 4) illustrerer, interaktionen mellem spiller og system igennem en hel iteration spillet. Diagrammet illustrerer at man kun skal starte spillet, vælge antal spillere og slå terning, resten gør system, som giver bedskeder tilbage til spilleren om hvad man har slået, hvor man rykker hen og hvilket feltet man lander på gør. Dette loop fortsætter indtil en spillers pengebeholdning går i nul, og en vinder bliver valgt.  Diagrammet giver  tilmed inspirationsgrundlag til design sekvensdiagrammet hvor metoder bliver tilføjet.   
 \\
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width = 1.0\textwidth]{Billeder/Designklassediagram.png}
-    \caption{Design klasse diagram}
-    \label{Design klasse diagram}
+    \includegraphics[width = 1.0\textwidth]{Billeder/DesignKlasseDiagram.png}
+    \caption{Designklassediagram}
+    \label{Designklassediagram}
 \end{figure}
-Design klasse diagrammet (Figur 4) visualisere klasse diagrammet mere specifikt, som er unikt for præcist denne opgave. Den giver en præcision af hvilke metoder og variabler, der har været tænkt der skulle bruges, og hvordan de enkel klasser arver fra hinanden. Klassen Piece ansvaret for lokationen af hver spillers brik på spille plade. Klassen Piece er information expert for lokation. Piece har ansvaret for lokationen da vi mener at det er her det giver bedst mening. Klassen Field har  to metoder landetOn og getName, som de dertilhørende klasser arver. Property-, Chance- og NoActionField arver alle denne metode, så det er derfor smart at ligge metoden oppe i klassen Field. 
+
+Designklasse diagrammet er bygget på vores domænemodel, hvor vi har overført vores delelementer til klasser.  Vores 'player' klasse opretter instanser af account og piece (Creator), hvori account klassens ansvar er at holde holde den specifikke spillers pengebeholdning og piece klassen har ansvaret for at holde spillerens placering (information expert).
+Vi har også valgt at lave en abstract class, 'field', som er super-klassen til de 3 polymorfiske underklasser: propertyfield, chancefield, og nonactionfield. De 3 underklasser arver attributter og metoden landedOn() fra superklassen. Vi har valgt at gøre field-klassen abstract og dens underklasser polymorfiske da underklassen deler nogle attributter, i form af at de alle er felter, men de kan nogle forskellige ting, som bliver udført igennem landendOn metoden. Resultatet af dette, er at vi kan lave et enktelt array i vores board-klasse der indeholder alle vores felteobjekter.
+Vores game-klasse er vores game-controller, der allokerer ansvaret for input-events til de forskelige klasser (controller) og videre ud til spilleren, igennem GUI-controlleren og til sidst GUI'en.
 \\
 \\
 \begin{figure} [h]
     \centering
-    \includegraphics[width = 0.4\textwidth]{Billeder/designsekvensdiagram.png}
-    \caption{Design sekvens diagram}
-    \label{Design sekvens diagram}
+    \includegraphics[width = 0.6\textwidth]{Billeder/DesignSequenceDiagram.png}
+    \caption{Designsekvensdiagram}
+    \label{Designsekvensdiagram}
 \end{figure}
-Dette design skevens diagram(Figur 5) viser, hvordan og i hvilken rækkefølge de forskellige klasser snakker sammen. Det kan ses at en  spillers balance bliver givet til en klasse Account, som holder styr på dette. Derudover kan det også ses at alle Locations metoderne bliver udført i klasse Piece. Design sekvens diagrammet giver et godt billede på hele processen i programmet fra start til slut på et grundlæggende niveau, så det er nemt at forstå for kunden. 
+\\
+Dette designsekvensdiagram(Figur 5) viser hvordan ,og i hvilken rækkefølge, de forskellige klasser snakker sammen. Det kan ses at en  spillers balance bliver givet til en klasse Account og har dermed ansvaret for spillernes pengesum eller balance. Derudover kan det også ses at alle Locations metoderne bliver udført i klasse Piece, da det er information expert. 
 \\
 \\
+\section{Dokumentation}
+Når man bruger og har fokus på objekt orienteret programmering, skal man lave instansser af klasserne, hvor de herfra kan arve fra hinanden. En subklasse arver attributter og metoder fra en anden klasse, hvor denne klasse bliver til en superklasse. Man vil derfor lave et klassehierarki, hvor subklasserne arver fra superklasserne. 
+\\
+\\
+En abstrakt klasse er en klasse, der i sig selv ikke kan instansieres, men bruges derimod som superklasse, hvor sub-klasser kan arve attributter og metoder fra den. Man har polymorfiske sub-klasser der deler nogle attributter og metode(r), men skal kunne forskellige ting. Dette har vi brugt i tilfældet for vores abstract super-klasse 'field' og dens sub-klasser (de tidligere nævnte field-klasser).
+\\
+\\
+Hvis en fieldklasse har en landOnField metode, hvor alle subklasserne bruger denne metode, bliver fieldklassen derfor til en abstrakt klasse. 
 
-Når man bruger objekt orienterede programmering, som der bliver gjort i dette projekt, er det vigtigt at klasserne arver fra hinanden. En subklasse arver attributter og metoder fra en anden klasse, som hermed bliver til en superklasse. Man vil derfor lave et klasse hierarki, hvor subklasserne arver fra superklasserne. 
-\\
-\\
-En abstrakt klasse er en superklasse, hvor alle de der tilhørende subklasser arver alt fra superklassen. Den abstrakte klasse kan ikke instansieres. 
+\subsection{Konfigurationsstyring}
+\subsubsection{Udviklingsplatform}
+\begin{itemize}
+    \item [\textbf{Operativsystem}] Windows 10+, macOS Venturra
+    \item [\textbf{java}] Version 8 update 351 (build 1.8.0\_351-b10)
+    \item [\textbf{IDE}] IntelliJ IDEA 2022.2.3 (Ultimate Edition)\\
+    Build \#IU-222.4345.14, built on October 5, 2022
+    \item[\textbf{Libraries}] Matador GUI: \href{https://github.com/diplomit-dtu/MatadorGUIGuide/tree/3.2.x}{https://github.com/diplomit-dtu/MatadorGUIGuide/tree/3.2.x}
 
-\break
+ \subsubsection{Dokumentation} Vores artifakter samt dokumentation bliver versionsstyret gennem Git og samles i et GitHub-repo. Den nyeste version af disse vil derfor findes i branchen "Development" og helt færdige produkter vil ligger i "Master".\\
+    Rapport og dokumentation bliver samlet i Overleaf som pusher til et repo. Artifakter bliver produceret og redigeret i IntelliJ ved brug af PlantUML og er også versionsstyret med git og pushes til Github.
+\end{itemize}
+
 \section{Implementering}
+Vi har forsøgt at implementere de klasser, der ifølge vores klassediagram er længst ude i forgreninger og samtidig også har færrest associationer til andre klasser.
 
 \section{Test}
 \subsection{Test case 01}
@@ -306,51 +332,81 @@ En abstrakt klasse er en superklasse, hvor alle de der tilhørende subklasser ar
       & on windows 11 Home version 22H2\\
     \hline
 \end{tabular}
-sfadfasfsda\\
+\subsection{Brugervenlighed}
+\\
 \begin{tabular}{ | m{0.2\textwidth} | m{0.8\textwidth}|}
     \hline
     Test case ID & TC03  \\
     \hline
-    Summary & \\
+    Summary & Brugertest af 2 -og 3 personer. Testen bliver udført i to omgange. \\
     \hline
-    Requirements & \\
+    Requirements & Testpersonerne skal kunne læse og anvende keyboard/mus.\\
     \hline
-    Preconditions & \\
+    Preconditions & De har fået spillet opstartet, simple instrukser samt spillets regler.\\
     \hline
-    Postconditions & \\
+    Postconditions & At spillerne ikke gider at gennemføre spillet grundet programmets brugervenlighed.\\
     \hline
-    Test Procedure & \\
+    Test Procedure & \begin{enumerate}[itemsep=0.1mm]
+        \item Angiv antal spillere 
+        \item Skriv navne på spillere 
+        \item Tryk enter/OK for at slå med terningen
+        \item Tryk enter/OK for at flytte brikken
+        \item Tryk enter/OK for at anerkende besked fra system
+        \item Tryk enter/OK for at give turen videre
+    \end{enumerate} \\
+
     \hline
-    Test data &  \\
+    Expected result & At spillet gennemføres og en vinder findes. \\
     \hline
-    Expected result & \\
+    Actual result & Spillet blev gennemført, dog med visse overvejelser/observationer, med programmets begrænsninger og simplicitet taget i betragtning. Testpersonernes feedback: \begin{enumerate}[itemsep=0.1mm]
+        \item Grammatisk fejl, det hedder dice og ikke die. 
+        \item Når man bliver informeret om at man er kommet i fængsel, er man ikke kommet i fængsel. 
+        \item I stedet for at skulle trykke "OK" vil de have en timer på teksten, så man er "tvunget" til at læse teksten, ellers er det for meget op til en selv, også trykker man for hurtigt, og går glip af vigtig info i spillet. 
+    \end{enumerate}\\
     \hline
-    Actual result & \\
+    Status & Spillet er gennemført uden problemer der har afgørende effekt på programmet\\
     \hline
-    Status & \\
+    Tested by & 3 vilkårlige personer. Testpersonerne er i aldersgruppen 19-25 år. Testpersonerne er både Mænd og Kvinder.\\
     \hline
-    Tested by & \\
+    Date & 24-11-2022\\
     \hline
-    Date & \\
-    \hline
-    Test environment & \\
+    Test environment & IntelliJ IDEA 2022.2.3 (Ultimate Edition)\\
+    &Mac OS Ventura\\
     \hline
 \end{tabular}
-
-\section{Bugfixes}
-I implementeringen af chancekortene, stødte vi på et problem der gjorde at, når der landes på et chancefelt, så vises ét chancekort, men handlingerne for et andet chancekort bliver udført.\\
-Årsagen til dette var at der, når man lander på et chancekort, bliver valgt tilfældigt mellem tre mulige chancekort-handlinger, og denne bliver derefter udført. På samme måde blev tekst for chancekortet (displayChanceCard(txt)), også valgt tilfældigt mellem tre mulige chancekort-handlinger. \\
+\subsection{JUnit Tests}
+Vi har lavet to Unit-tests, men vi ville gerne have lavet flere. Vi oplevede problemer da vi ville lave tests der testede om inputtet fra brugeren blev brugt korrekt.
+\begin{figure} [h]
+    \centering
+    \includegraphics[width = \textwidth]{Billeder/UnitTests.jpg}
+    \caption{Fuldførte Unit-tests}
+    \label{fig:my_label}
+\end{figure}
+\subsection{Bugs identificeret}
+\begin{itemize}
+\item \textbf{(Fjernet)} I implementeringen af chancekortene, stødte vi på et problem der gjorde at, når der landes på et chancefelt, så vises ét chancekort, men handlingerne for et andet chancekort bliver udført\\
+Årsagen til dette var at der, når man lander på et 					chancekort, bliver valgt tilfældigt mellem tre mulige chancekort-handlinger, og denne bliver derefter udført. På samme måde blev tekst for chancekortet (displayChanceCard(txt)), også valgt tilfældigt mellem tre mulige chancekort-handlinger. \\
 Disse var altså uafhængige af hinanden, og derfor opstod problemet.
-Løsninge til dette var...
+Vi endte med at udelade brugen af displayChanceCard(txt), og vores chancekort bliver derfor heller ikke vist når man trækker dem.
 
-Et bug, hvis samme navn er indtastet gælder det kun som en spiller.
+\item En bug er, hvis man er to personer, som hedder det samme, og skriver det samme navn ind to gange til systemet, så vil systemet se det som en spiller.
 
+\item  En bug er, man betaler først rent til modstanderen runden efter sin egen. 
+
+\item En bug er at en spilleres balance kan godt være negativ, og spillet vil stadig fortsætte. Hvis den første spiller går i minus, så vil runden spilles færdig, så hvis en modstander lander på en af hans grunde, så vil han få rent og derfor ikke længere være i minus. Spillet burde spillet lige så snart at en af spillerenes balance går i minus, da man har tabt lige så snart man går  i minus
+
+\item \textbf{(Løst)} En bug er, man køber ikke det felt man lander på efter man har trukket et chancekort. 
+\\
+Problemet var at chancekortene kun kørte ’set-loaction’ metoden, som ikke også kører 'landedOn' metoden. Løsningen til dette var at ændre chancekortene, så de ikke bruger 'set-location' metoden, men kun 'add-location' metoden, som også derefter kører 'landedOn' metoden. Efter denne ændring virkede chancekortene som det var meningen.
+\end{itemize}
 
 \section{Konklusion}
-På baggrund af ovenstående rapport, kan man se at der er blevet produceret en use case, en række diagrammere og programmeret Monopoly Junior, som indeholder kundens vision og alle kravene som hertil følger. Ud fra en analyse er der blevet lavet en use casen og fremstillet nogle diagrammerne, og de er vigtig for dette projekt, da de
-er det grundlæggende for hele opgaven. Diagrammerne er dem som simplificere programmet, som i sidste ende gør opgaven at programmere et Monopoly Junior spil mere overskueligt og derfor også nemmere. Den bruger venlige test sikre os, at det programmeret Monopoly Junior spil kan spilles af mennesker, som ikke har været en del af dette projekt eller anden relation. Der kan derfor konkluderes at der er blevet produceret et Monopoly  Junior spil efter kundens ønske, hvilket tager udgangspunkt i deres vision og krav, samt egen vurdering af hvad Monopoly Junior spillet skal indeholde.  
+På baggrund af kundens vision, vores funktionelle kravliste og vores liste af regler vi løbende ville implementere i prioriteret rækkefølge, kan vi konkludere at vi har lavet et spil, der opfylder de funktionelle krav, samt størstedelen af  de regler vi ville implementere. Dog har vi hverken prioriteret eller implementeret, en funktion for let at kunne oversætte spillet til et andet sprog da: 1. Opgaven var umiddelbart uoverskuelig og 2. Vi mente det var vigtigere at lave et spil der faktisk virkede end et ikke-eksisterende spil, der kunne oversættes til swahili.
+\\
 \section{Bilag}
 \subsection{Litteratur}
 \subsection{Kode}
+Koden til projektet findes i følgende repository på Github: \href{https://github.com/Jakob-SA/CDIO-}{https://github.com/Jakob-SA/CDIO-3}
+
 
 \end{document}
