@@ -22,12 +22,10 @@ Class NoActionField
 abstract class Field
 Field : - String fieldName
 Field : + landetOn ()
-Field : + getName ()
 Field : + field ()
 
 Class ChanceField
 ChanceField : + landetOn (Player player)
-ChanceField : + getName ()
 ChanceField : + ChanceField (String name)
 
 Class Board
@@ -44,7 +42,7 @@ Game : + chooseWinner ()
 Class NoActionField
 NoActionField : + NoActionField ()
 NoActionField : + landetOn()
-NoActionField : + getName ()
+
 
 Class ProportyField
 ProportyField : - int buyPrice
@@ -52,9 +50,6 @@ ProportyField : - int rent
 ProportyField : - String playerName
 ProportyField : - Player owner
 ProportyField : + ProportyField (Player owner, String ownerName, String name, int price, int rent)
-ProportyField : + getName ()
-ProportyField : + setOwner (Player Owner)
-ProportyField : + setPlayerName (String name)
 ProportyField : + int getBuyPrice ()
 ProportyField : + String toString ()
 
@@ -63,7 +58,6 @@ Class DieCup
 DieCup : - int dieSum
 DieCup : - maxFacevalue
 DieCup : + Shake ()
-DieCup : + getDieSum
 DieCup : + dieCup (int dieSides)
 
 
@@ -72,32 +66,24 @@ Die : - int facevalue
 Die : - int maxFacevalue
 Die : + Die (int dieSides)
 Die : + roll ()
-Die : + getFacevalue ()
 
 Class Players
 Players : - String name
 Players : - int playerNumber
 Players : - int playerCounter
-Players : + setName (String name)
 Players : + Players (String name)
-Players : + getPlayerNumber ()
-Players : + getPlayerCount ()
 Players : + toString ()
 
 Class Piece
 Piece : - int location
 Piece : - String color
-Piece : + getLocation ()
 Piece : + addLocation (int dieSum)
-Piece : + setLocation (int field)
 Piece : + String toString ()
 
 Class Account
 Account : - int balance
 Account : + account ()
-Account : + getBalance ()
 Account : + payRent (Account player)
-Account : + setBalance (int balance)
 Account : + addBalance (int amount)
 Account : + toString()
 

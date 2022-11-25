@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+Actor Player
+autonumber
+Player -> System: gameStart()
+System --> Player: numberOfPlayers()
+Player -> System: setNumberOfPlayers()
+System -> Game: createPlayers()
+System -> Account: setBalance()
+loop balance => 0
+Game --> System: rollDie()
+System -> Piece: addLocation()
+System -> Piece: getLocation()
+Game --> System: Action()
+end
+
+
+
+
+System --> Player: Chooswinner()
+
+
+
+
+@enduml
